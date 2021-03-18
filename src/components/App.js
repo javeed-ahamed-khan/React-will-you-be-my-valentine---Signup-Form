@@ -78,7 +78,7 @@ const App = () => {
       <Phone userPhone={userPhone} setUserPhone={setUserPhone} />
       <Password userPassword={userPassword} setUserPassword={setUserPassword} />
       <div>
-        <button data-testid="submit" onClick={handleSubmit}>
+        <button data-testid="submit" onClick={handleSubmit} type="submit">
           Submit
         </button>
       </div>
