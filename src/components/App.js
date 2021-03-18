@@ -73,7 +73,7 @@ const App = () => {
   return (
     <div id="main">
       <h3 ref={message}></h3>
-      <form id="myForm" action="#" method="post">
+      <form id="myForm" action="http://localhost:8080/" method="post">
         <Name userName={userName} setUserName={setUserName} />
         <Email userEmail={userEmail} setUserEmail={setUserEmail} />
         <Gender userGender={userGender} setUserGender={setUserGender} />
@@ -83,7 +83,9 @@ const App = () => {
           setUserPassword={setUserPassword}
         />
         <div>
-          <input data-testid="submit" onClick={handleSubmit} type="submit" />
+          <button data-testid="submit" onClick={handleSubmit} type="submit">
+            Submit
+          </button>
         </div>
       </form>
     </div>
