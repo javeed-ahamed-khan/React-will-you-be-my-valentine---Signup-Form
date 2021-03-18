@@ -83,9 +83,7 @@ const App = () => {
           setUserPassword={setUserPassword}
         />
         <div>
-          <button data-testid="submit" onClick={handleSubmit} type="submit">
-            Submit
-          </button>
+          <input data-testid="submit" onClick={handleSubmit} type="submit" />
         </div>
       </form>
     </div>
