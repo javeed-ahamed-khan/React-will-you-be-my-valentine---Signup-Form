@@ -40,7 +40,8 @@ const App = () => {
     return userPassword.length < 6 ? true : false;
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
     if (areFieldEmpty()) {
       message.current.innerText = "All fields are mandatory";
       // alert("All fields are mandatory");
@@ -72,16 +73,21 @@ const App = () => {
   return (
     <div id="main">
       <h3 ref={message}></h3>
-      <Name userName={userName} setUserName={setUserName} />
-      <Email userEmail={userEmail} setUserEmail={setUserEmail} />
-      <Gender userGender={userGender} setUserGender={setUserGender} />
-      <Phone userPhone={userPhone} setUserPhone={setUserPhone} />
-      <Password userPassword={userPassword} setUserPassword={setUserPassword} />
-      <div>
-        <button data-testid="submit" onClick={handleSubmit} type="submit">
-          Submit
-        </button>
-      </div>
+      <form id="myForm" action="#" method="post">
+        <Name userName={userName} setUserName={setUserName} />
+        <Email userEmail={userEmail} setUserEmail={setUserEmail} />
+        <Gender userGender={userGender} setUserGender={setUserGender} />
+        <Phone userPhone={userPhone} setUserPhone={setUserPhone} />
+        <Password
+          userPassword={userPassword}
+          setUserPassword={setUserPassword}
+        />
+        <div>
+          <button data-testid="submit" onClick={handleSubmit} type="submit">
+            Submit
+          </button>
+        </div>
+      </form>
     </div>
   );
 };
