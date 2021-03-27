@@ -62,18 +62,17 @@ const App = () => {
         .trim()
         .slice(0, userEmail.search("@"))}`;
       // alert(`Hello ${userEmail.trim().slice(0, userEmail.search("@"))}`);
-      setUserName("");
-      setUserEmail("");
-      setUserGender("male");
-      setUserPhone("");
-      setUserPassword("");
+      // setUserName("");
+      // setUserEmail("");
+      // setUserGender("male");
+      // setUserPhone("");
+      // setUserPassword("");
     }
   };
 
   return (
     <div id="main">
-      <h3 ref={message}></h3>
-      <form id="myForm" action="http://localhost:8080/" method="post">
+      <form id="myForm" action="">
         <Name userName={userName} setUserName={setUserName} />
         <Email userEmail={userEmail} setUserEmail={setUserEmail} />
         <Gender userGender={userGender} setUserGender={setUserGender} />
@@ -88,6 +87,7 @@ const App = () => {
           </button>
         </div>
       </form>
+      <h3 ref={message}></h3>
     </div>
   );
 };
